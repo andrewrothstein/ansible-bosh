@@ -1,0 +1,26 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: download bosh-cli
+  become: '{{ bosh_escalate }}'
+  become_user: root
+  get_url:
+    url: '{{ bosh_url }}'
+    dest: '{{ bosh_installed_exe }}'
+    checksum: '{{ bosh_checksum }}'
+    mode: 0755
+- name: link bosh-cli
+  become: '{{ bosh_escalate }}'
+  become_user: root
+  file:
+    src: '{{ bosh_installed_exe }}'
+    dest: '{{ bosh_installed_link }}'
+    state: link

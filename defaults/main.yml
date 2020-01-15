@@ -1,0 +1,18 @@
+---
+# defaults file for bosh
+bosh_ver: '6.1.1'
+bosh_mirror: https://github.com/cloudfoundry/bosh-cli/releases/download
+bosh_os: linux
+bosh_arch: amd64
+
+bosh_escalate: yes
+bosh_install_dir: /usr/local/bin
+
+bosh_checksums:
+  '6.1.1':
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v6.1.1/bosh-cli-6.1.1-darwin-amd64
+    darwin-amd64: sha256:0d0083c5adbfa6f689aebdde9f08aa7f5848527bb6c7d0666811bd9c75faa3c3
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v6.1.1/bosh-cli-6.1.1-linux-amd64
+    linux-amd64: sha256:98936d0bd22db0c13b874294cc1a83014d8074c2577cd2f269297c0099d68381
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v6.1.1/bosh-cli-6.1.1-windows-amd64.exe
+    windows-amd64: sha256:a1480e90ee823108332e2087ebd6b62817b75db4c03bd6a603da1d8333e07e22

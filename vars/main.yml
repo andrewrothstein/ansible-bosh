@@ -1,0 +1,8 @@
+---
+# vars file for bosh
+bosh_platform: '{{ bosh_os }}-{{ bosh_arch }}'
+bosh_exe: bosh-cli-{{ bosh_ver }}-{{ bosh_platform }}{{ bosh_dotexe | default("") }}
+bosh_url: '{{ bosh_mirror }}/v{{ bosh_ver }}/{{ bosh_exe }}'
+bosh_checksum: '{{ bosh_checksums[bosh_ver][bosh_platform] }}'
+bosh_installed_exe: '{{ bosh_install_dir }}/{{ bosh_exe }}'
+bosh_installed_link: '{{ bosh_install_dir }}/bosh'
