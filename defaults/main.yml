@@ -2,8 +2,10 @@
 # defaults file for bosh
 bosh_ver: 7.1.0
 bosh_mirror: https://github.com/cloudfoundry/bosh-cli/releases/download
-bosh_os: linux
-bosh_arch: amd64
+bosh_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 
 bosh_escalate: true
 bosh_install_dir: /usr/local/bin

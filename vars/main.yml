@@ -1,5 +1,7 @@
 ---
 # vars file for bosh
+bosh_os: '{{ ansible_system | lower }}'
+bosh_arch: '{{ bosh_arch_map[ansible_architecture] }}'
 bosh_platform: '{{ bosh_os }}-{{ bosh_arch }}'
 bosh_exe: bosh-cli-{{ bosh_ver }}-{{ bosh_platform }}{{ bosh_dotexe | default("") }}
 bosh_url: '{{ bosh_mirror }}/v{{ bosh_ver }}/{{ bosh_exe }}'
