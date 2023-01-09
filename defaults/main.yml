@@ -1,6 +1,6 @@
 ---
 # defaults file for bosh
-bosh_ver: 7.1.0
+bosh_ver: 7.1.1
 bosh_mirror: https://github.com/cloudfoundry/bosh-cli/releases/download
 bosh_arch_map:
   aarch64: arm64
@@ -173,3 +173,12 @@ bosh_checksums:
     linux-amd64: sha256:8e9cd8a01de0faadebbe25b9f223df09962eb9eaa58feef928a6d5b6ba35ae87
     # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.1.0/bosh-cli-7.1.0-windows-amd64.exe
     windows-amd64: sha256:73f0858d10a1cf65259eabd6cdd33e3247cb4f70f23b2fc29ae922ba040f768f
+  '7.1.1':
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.1.1/bosh-cli-7.1.1-darwin-amd64
+    darwin-amd64: sha256:b133bd57a6d7c79c02a64d6cd764a632f79f398dad9b4976a0e04892f9c38631
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.1.1/bosh-cli-7.1.1-darwin-arm64
+    darwin-arm64: sha256:ba63704155f471357efacba82efb184a5e8a9c38b9b1a052d2f2106ba859f5c1
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.1.1/bosh-cli-7.1.1-linux-amd64
+    linux-amd64: sha256:edf1e58194dc8c8154e0a7a48331177b5179aa7c3ec54505c7bcb3373bb411d5
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.1.1/bosh-cli-7.1.1-windows-amd64.exe
+    windows-amd64: sha256:90fe42d041914d8d98489b2424b12f869f8827da98fdcfd5b26a55d8ea988afd
