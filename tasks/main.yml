@@ -16,6 +16,7 @@
     url: '{{ bosh_url }}'
     dest: '{{ bosh_installed_exe }}'
     checksum: '{{ bosh_checksum }}'
+    timeout: '{{ bosh_timeout | default(600) }}'
     mode: 0755
 - name: linking {{ bosh_installed_link }} to {{ bosh_installed_exe }}
   become: '{{ bosh_escalate }}'

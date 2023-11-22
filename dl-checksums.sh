@@ -26,7 +26,8 @@ dl_ver() {
     dl $ver darwin amd64
     dl $ver darwin arm64
     dl $ver linux amd64
+    dl $ver linux arm64
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-7.1.3}
+dl_ver ${1:-7.4.1}
