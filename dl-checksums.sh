@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/cloudfoundry/bosh-cli/releases/download
 
@@ -30,4 +31,4 @@ dl_ver() {
     dl $ver windows amd64 .exe
 }
 
-dl_ver ${1:-7.4.1}
+dl_ver ${1:-7.5.5}

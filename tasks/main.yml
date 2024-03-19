@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -9,19 +9,19 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: downloading {{ bosh_url }} to {{ bosh_installed_exe }}
+- name: Downloading {{ bosh_url }} to {{ bosh_installed_exe }}
   become: '{{ bosh_escalate }}'
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ bosh_url }}'
     dest: '{{ bosh_installed_exe }}'
     checksum: '{{ bosh_checksum }}'
     timeout: '{{ bosh_timeout | default(600) }}'
-    mode: 0755
-- name: linking {{ bosh_installed_link }} to {{ bosh_installed_exe }}
+    mode: '755'
+- name: Linking {{ bosh_installed_link }} to {{ bosh_installed_exe }}
   become: '{{ bosh_escalate }}'
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ bosh_installed_exe }}'
     dest: '{{ bosh_installed_link }}'
     state: link
