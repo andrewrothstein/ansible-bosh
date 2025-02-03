@@ -1,6 +1,6 @@
 ---
 # defaults file for bosh
-bosh_ver: 7.8.7
+bosh_ver: 7.9.0
 bosh_mirror: https://github.com/cloudfoundry/bosh-cli/releases/download
 
 # timeout in seconds for the download
@@ -259,3 +259,14 @@ bosh_checksums:
     linux-arm64: sha256:1e797615a1f865574b419bb6edca0aea535f87fa1574e7fafa41f6758776e1d8
     # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.8.7/bosh-cli-7.8.7-windows-amd64.exe
     windows-amd64: sha256:beb1155d20f7cfb0fb9af7fd58c7fdae1edf5b95113ef6ade78b2575ac926d20
+  '7.9.0':
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.9.0/bosh-cli-7.9.0-darwin-amd64
+    darwin-amd64: sha256:3c5f6fdd41052877a864bcb9cc6921cdf836bedae65d4e88486c62d7d1405137
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.9.0/bosh-cli-7.9.0-darwin-arm64
+    darwin-arm64: sha256:1716b7dd8a0a9d1a6db33ebb5368f9b454e8e4a7bc7ba094de7f48f077c62922
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.9.0/bosh-cli-7.9.0-linux-amd64
+    linux-amd64: sha256:de3001ce5f14f9d40cd72cc22d9626c5d806e46f0d061c69e725841e12830847
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.9.0/bosh-cli-7.9.0-linux-arm64
+    linux-arm64: sha256:2342fca54013db852dec9cd0a092dd3399b529866fdf3473badbdb3cef65eb40
+    # https://github.com/cloudfoundry/bosh-cli/releases/download/v7.9.0/bosh-cli-7.9.0-windows-amd64.exe
+    windows-amd64: sha256:7e29e4b6b95c8de733111b65cc162b9e88028fd39c1d891ff63e46ccb2f1ef2a
